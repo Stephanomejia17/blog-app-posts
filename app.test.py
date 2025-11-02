@@ -14,8 +14,8 @@ class TestApp(unittest.TestCase):
         mock_cursor.__iter__.return_value = [
             {'_id': '60458fb603c395f9a81c9f4a', 'title': 'Test Title', 'content': 'Test Content', 'user_id': 'user123'}
         ]
-        mock_collection.find.return_value = mock_cursor
 
+        mock_collection.find.return_value = mock_cursor
 
         response = self.app.get('/posts')
         data = json.loads(response.data.decode('utf-8'))
