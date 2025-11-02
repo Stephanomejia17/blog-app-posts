@@ -15,7 +15,7 @@ collection = db['posts']
 
 @app.route('/', methods=['GET'])
 def hello_world():
-    return jsonify('Hello World!')
+    return jsonify('Hello World! Gestión de la configuracion :D')
 
 
 @app.route('/posts', methods=['GET'])
