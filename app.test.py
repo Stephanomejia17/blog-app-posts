@@ -16,6 +16,7 @@ class TestApp(unittest.TestCase):
         ]
         mock_collection.find.return_value = mock_cursor
 
+
         response = self.app.get('/posts')
         data = json.loads(response.data.decode('utf-8'))
 
